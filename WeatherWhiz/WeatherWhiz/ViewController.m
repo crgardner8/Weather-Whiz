@@ -195,10 +195,10 @@
     
     self.locationLabel.text = temperature.weatherLocation.cityStateString;
     self.dateTimeLabel.text = [WWDateFormatters getFullCalendarDateFromTimestamp:temperature.timestamp ForTimezone:temperature.weatherLocation.timezoneString];
-    self.currentLocTempLabel.text = [NSString stringWithFormat:@"%li", temperature.temperature];
+    self.currentLocTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", temperature.temperature];
     self.weatherDescriptionLabel.text = temperature.weatherDescription;
-    self.currentDayHiTempLabel.text = [NSString stringWithFormat:@"%li", temperature.weatherForcast.weatherHi];
-    self.currentDayLowTempLabel.text = [NSString stringWithFormat:@"%li", temperature.weatherForcast.weatherLow];
+    self.currentDayHiTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", temperature.weatherForcast.weatherHi];
+    self.currentDayLowTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", temperature.weatherForcast.weatherLow];
     
     for (int i = 0; i < 5; i++) {
         
@@ -207,28 +207,28 @@
         switch(i) {
             case 0:
                 self.day1Label.text = [WWDateFormatters getDayAbbreviationFromTimestamp:nextDayForcast.timestamp];
-                self.day1HiTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherHi];
-                self.day1LowTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherLow];
+                self.day1HiTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherHi];
+                self.day1LowTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherLow];
                 break;
             case 1:
                 self.day2Label.text = [WWDateFormatters getDayAbbreviationFromTimestamp:nextDayForcast.timestamp];
-                self.day2HiTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherHi];
-                self.day2LowTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherLow];
+                self.day2HiTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherHi];
+                self.day2LowTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherLow];
                 break;
             case 2:
                 self.day3Label.text = [WWDateFormatters getDayAbbreviationFromTimestamp:nextDayForcast.timestamp];
-                self.day3HiTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherHi];
-                self.day3LowTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherLow];
+                self.day3HiTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherHi];
+                self.day3LowTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherLow];
                 break;
             case 3:
                 self.day4Label.text = [WWDateFormatters getDayAbbreviationFromTimestamp:nextDayForcast.timestamp];
-                self.day4HiTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherHi];
-                self.day4LowTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherLow];
+                self.day4HiTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherHi];
+                self.day4LowTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherLow];
                 break;
             case 4:
                 self.day5Label.text = [WWDateFormatters getDayAbbreviationFromTimestamp:nextDayForcast.timestamp];
-                self.day5HiTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherHi];
-                self.day5LowTempLabel.text = [NSString stringWithFormat:@"%li", nextDayForcast.weatherLow];
+                self.day5HiTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherHi];
+                self.day5LowTempLabel.text = [NSString stringWithFormat:@"%li\u00B0", nextDayForcast.weatherLow];
                 break;
         }
     }
